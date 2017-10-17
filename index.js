@@ -1,8 +1,15 @@
 const express = require('express')
 const app = express()
 
-app.listen(3030,functionMonitor())
+const PORT = 3030
 
-const functionMonitor = () => {
-  console.log(`app is already run on port 3030`)
+app.get('/',(req,res)=>{
+  console.log(req)
+  res.end(`Hello`)
+})
+
+app.listen(PORT,functionMonitor(PORT))
+
+const functionMonitor = (port) => {
+  console.log(`app is already run on port ${port}`)
 }
