@@ -5,9 +5,11 @@ const port = 3030
 
 app.get('/',(req,res)=>{
   console.log(req)
-  res.end(`Hello`)
-  res.end(`Listen in port 3030`)
+  res.send(`Hello`)
+  res.send(`Listen in port 3030`)
 })
+
+
 
 app.listen(port,functionMonitor(port))
 
