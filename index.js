@@ -14,6 +14,11 @@ app.get('/stank',(req,res)=>{
   res.send(`Stank`)
 })
 
+app.get('/eiei',(req,res)=>{
+  console.log(req)
+  res.send(`eiei`)
+})
+
 app.listen(port,functionMonitor(port))
 
 const functionMonitor = (port) => {
