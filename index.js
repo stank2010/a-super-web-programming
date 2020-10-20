@@ -9,7 +9,10 @@ app.get('/',(req,res)=>{
   res.send(`Listen in port 3030`)
 })
 
-
+app.get('/stank',(req,res)=>{
+  console.log(req)
+  res.send(`Stank`)
+})
 
 app.listen(port,functionMonitor(port))
 
